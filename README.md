@@ -39,3 +39,7 @@ La ciencia lleva tiempo inmersa en una crisis de reproducibilidad. La presión p
 # Calendario
 
 # Referencias
+
+Rodríguez-Sánchez, F., Pérez-Luque, A.J. Bartomeus, I., Varela, S. 2016. Ciencia reproducible: qué, por qué, cómo. Ecosistemas 25(2): 83-92. Doi.: 10.7818/ECOS.2016.25-2.11
+
+Astigarraga, J., & Cruz-Alonso, V. (2022). ¡Se puede entender cómo funcionan Git y GitHub! Ecosistemas, 31(1), 2332. Doi: 10.7818/ECOS.2332
