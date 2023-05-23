@@ -17,13 +17,21 @@ La ciencia lleva tiempo inmersa en una crisis de reproducibilidad. La presión p
 # Contenido
 1. La crisis de reproducibilidad
 2. Ciencia reproducible.
+
     2.2 Qué es la ciencia reproducible
+    
     2.3 Por qué es necesaria
+    
     2.4 Cómo implementarla
+
 3. El flujo de trabajo reproducible
+    
     3.1 Buenas prácticas con datos y código
+    
     3.2 Control de versión con Git
+    
     3.3 Integración con GitHub
+    
     3.4 Redacción de artículos reproducibles
 
 # Calendario
