@@ -10,6 +10,7 @@ paginate: true
 <!--_class: lead -->
 
 ![bg left](img/repro_crisis.png)
+
 # La crisis de reproducibilidad
 
 ---
