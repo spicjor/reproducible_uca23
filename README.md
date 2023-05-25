@@ -38,7 +38,7 @@ Contenido
     
     3.2 Control de versión con Git
     
-    3.3 Integración con GitHub
+    3.3 Integración con RStudio y GitHub
     
     3.4 Redacción de artículos reproducibles
 
