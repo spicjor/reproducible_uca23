@@ -1,5 +1,5 @@
 ---
-marp: true
+marp: false
 theme: gaia
 color: #000
 backgroundColor: #fff
