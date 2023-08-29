@@ -1,5 +1,5 @@
 ---
-marp: false
+marp: true
 theme: gaia
 color: #000
 backgroundColor: #fff
@@ -11,7 +11,7 @@ paginate: true
 
 ![bg left](img/repro_crisis.png)
 
-# La crisis de reproducibilidad
+# 1. La crisis de reproducibilidad
 
 ---
 
@@ -29,7 +29,7 @@ Baker, M., Penny, D. (2016). Is there a reproducibility crisis? *Nature*, 533, 4
 
 **Lo tradicional:** Solo el artículo y los resultados que los autores eligen se publican.
 
-![bg right 110%](img/macarthur_paper.png)
+![bg right 100%](img/macarthur_paper.png)
 
 ---
 
@@ -37,15 +37,15 @@ Baker, M., Penny, D. (2016). Is there a reproducibility crisis? *Nature*, 533, 4
 
 No datos brutos y métodos poco detallados = irreproducible
 
-![bg right 100%](img/macarthur_plot.png)
+![bg right 110%](img/macarthur_plot.png)
 
 ---
 
 # Efectos no solo académicos
 
-Errores que se propagan a la política económica mundial.
+Errores que se propagan a la política económica mundial (5000 citas en Google Scholar).
 
-![bg right 120%](img/debtgrowth_paper.png)
+![bg right 140%](img/debtgrowth_paper.png)
 
 ---
 
@@ -55,7 +55,7 @@ Un error en una hoja de Excel con tremendas consecuencias.
 
 Si se hubiera seguido una metodología reproducible, probablemente se habría evitado.
 
-![bg right 100%](img/critique_debt.png)
+![bg right 120%](img/critique_debt.png)
 
 ---
 

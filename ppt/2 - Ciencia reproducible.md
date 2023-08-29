@@ -9,14 +9,18 @@ paginate: true
 <!--_paginate: false -->
 <!--_class: lead -->
 
-# Ciencia reproducible
+# 2. Ciencia reproducible
 ## ¿Qué es? ¿Cómo y por qué?
 
 ---
 
+## 2.1 Qué es la ciencia reproducible
+
 **Reproducible (reproducibility):**
 
 "Un estudio es reproducible si el texto del artículo viene acompañado de código... ...que permite recrear exactamente a partir de los datos originales todos los resultados y figuras incluidos en el artículo."
+
+---
 
 **vs Repetible (replicability):**
 
@@ -26,22 +30,23 @@ Rodríguez-Sánchez, F., Pérez-Luque, A.J. Bartomeus, I., Varela, S. 2016. Cien
 
 ---
 
-# Necesitamos cambiar el flujo de trabajo
+## 2.2 Por qué es necesaria
 
-![bg right 120%](img/curva.png)
+1. Garantía de transparencia y calidad. Menos errores y estos son detectables y corregibles.
 
----
+2. Poder reutilizar código ayuda a acelerar el progreso científico.
 
-![bg](img/almacenamiento.png)
+3. Datos y código requeridos por revistas y entidades financiadoras.
 
----
-
-![bg](img/analisis.png)
+4. Beneficios personales: ahorro de tiempo y esfuerzo, facilita la colaboración, signo de calidad, más probabilidad de citas, etc.
 
 ---
 
-![bg](img/figuras.png)
+## 2.3 Cómo implementarla?
+
+Necesitamos cambiar la manera en que trabajamos.
+
+![bg right 140%](img/curva.png)
 
 ---
 
-![bg](img/redaccion.png)
