@@ -26,11 +26,11 @@ Contenido
 1. La crisis de reproducibilidad
 2. Ciencia reproducible.
 
-    2.2 Qué es la ciencia reproducible
+    2.1 Qué es la ciencia reproducible
     
-    2.3 Por qué es necesaria
+    2.2 Por qué es necesaria
     
-    2.4 Cómo implementarla
+    2.3 Cómo implementarla
 
 3. El flujo de trabajo reproducible
     
