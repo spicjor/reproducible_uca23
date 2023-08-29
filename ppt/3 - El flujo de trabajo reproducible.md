@@ -18,7 +18,7 @@ paginate: true
 
 **Planificar:** Cómo se van a obtener, recoger, almacenar y compartir los datos.
 
-**Recolectar:** Intentar conservar SIEMPRE los datos brutos en el formato original.
+**Recolectar:** Intentar conservar **siempre** los datos brutos en el formato original.
 
 **Metadatos:** Descripción detallada de lo que representa cada variable, cómo se tomó, en qué unidades está, las personas encargadas, etc.
 
@@ -30,14 +30,24 @@ paginate: true
 
 ---
 
-## Control de versión
+## Control de versión: Local
 
+![bg center 80%](img/git_logo.png)
 
+---
+
+## Control de versión: En la nube
+
+![bg center 80%](img/github_2.png)
 
 ---
 
 ## Análisis en código
 
+![bg center 40%](img/r_logo.png)
+
 ---
 
 ## Manuscritos reproducibles
+
+![bg center 50%](img/markdown_logo.png)

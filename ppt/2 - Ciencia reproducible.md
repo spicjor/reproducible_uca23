@@ -44,9 +44,6 @@ Rodríguez-Sánchez, F., Pérez-Luque, A.J. Bartomeus, I., Varela, S. 2016. Cien
 
 ## 2.3 Cómo implementarla?
 
-Necesitamos cambiar la manera en que trabajamos.
+Necesitamos cambiar la manera en que trabajamos por un **flujo de trabajo reproducible**.
 
 ![bg right 140%](img/curva.png)
-
----
-
