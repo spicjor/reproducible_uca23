@@ -36,9 +36,17 @@ paginate: true
 
 ---
 
+![bg center 95%](img/snapshots.png)
+
+---
+
 ## Control de versión: En la nube
 
 ![bg center 80%](img/github_2.png)
+
+---
+
+![bg center](img/github_repo.png)
 
 ---
 
@@ -48,6 +56,13 @@ paginate: true
 
 ---
 
+![bg center](img/rstudio.png)
+
+---
+
 ## Manuscritos reproducibles
 
 ![bg center 50%](img/markdown_logo.png)
+
+---
+
