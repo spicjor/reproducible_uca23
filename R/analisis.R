@@ -40,12 +40,27 @@ data <- data %>% dplyr::select(occurrenceID, scientificName, individualCount, de
 # Quitar observaciones no identificadas a nivel de especie
 data <- data %>% filter(scientificName != "Chordata")
 
+# Acortar nombres científicos
+data$scientificName[data$scientificName == "Podarcis carbonelli (Perez Mellado, 1981)"] <- "Podarcis carbonelli"
+data$scientificName[data$scientificName == "Podarcis carbonelli Perez Mellado, 1981"] <- "Podarcis carbonelli"
+data$scientificName[data$scientificName == "Psammodromus algirus (Linnaeus, 1758)"] <- "Psammodromus algirus"
+data$scientificName[data$scientificName == "Tarentola mauritanica (Linnaeus, 1758)"] <- "Tarentola mauritanica"
+data$scientificName[data$scientificName == "Acanthodactylus erythrurus (Schinz, 1833)"] <- "Acanthodactylus erythrurus"
+data$scientificName[data$scientificName == "Testudo graeca (Linnaeus, 1758)"] <- "Testudo_graeca"
+data$scientificName[data$scientificName == "Testudo graeca Linnaeus, 1758"] <- "Testudo_graeca"
+data$scientificName[data$scientificName == "Psammodromus occidentalis (Fitze, Gonzalez-Jimena, San Jose, San Mauro & Zardoya, 2012)"] <- "Psammodromus occidentalis"
+data$scientificName[data$scientificName == "Psammodromus occidentalis Fitze, Gonzalez-Jimena, San-Jose, San Mauro & Zardoya, 2012"] <- "Psammodromus occidentalis"
+data$scientificName[data$scientificName == "Timon lepidus (Daudin, 1802)"] <- "Timon lepidus"
+data$scientificName[data$scientificName == "Hemorrhois hippocrepis (Linnaeus, 1758)"] <- "Hemorrhois hippocrepis"
+data$scientificName[data$scientificName == "Chalcides striatus (Cuvier, 1829)"] <- "Chalcides striatus"
+data$scientificName[data$scientificName == "Malpolon monspessulanus (Hermann, 1804)"] <- "Malpolon monspessulanus"
+
 # Crear un objeto espacial con las coordenadas de
 # las observaciones
 obs <- terra::vect(data, geom = c(x = "decimalLongitude", y = "decimalLatitude"))
 
 # Crear un mapa interactivo con leaflet
-terra::plet(obs, col = viridis::viridis(11))
+terra::plet(obs, col = "#003366")
 
 # Calcular las observaciones por año y especie
 # Crear variable año a partir del campo fecha
@@ -68,7 +83,7 @@ color_scale <- viridis::viridis(ncol(data[, -1]))[seq(1, ncol(data[, -1]), by = 
 
 # Create empty plot
 base::plot(x = data$Year,
-y = seq(0, max(data[, -1], na.rm = TRUE), length.out = length(data$Year)),
+y = seq(0, max(data[, -1], na.rm = TRUE) + 20, length.out = length(data$Year)),
 type = "n",
 las = 1,
 ann = FALSE
@@ -80,6 +95,16 @@ mtext(side = 1, text = "Año", line = 2.5, cex = 1.2)
 
 # Plot species time series
 spp <- names(data)[-1]
-for (i in 1:length(spp)) {
+for (i in seq_along(spp)) {
   lines(x = data$Year, y = data[, spp[i]], col = color_scale[i], lwd = 2)
 }
+
+# Add legend
+legend(x = 2005, y = 105,
+       legend = spp,
+       col = color_scale,
+       pch = "-",
+       lwd = 3,
+       cex = 0.6,
+       bty = "n"
+)
