@@ -42,8 +42,10 @@ Contenido
     
     3.4 Redacción de artículos reproducibles
 
-Calendario
+Hora y lugar
 ---
+
+5 de octubre de 2023, 9:00 am
 
 Referencias
 ---
