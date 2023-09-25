@@ -81,7 +81,7 @@ data[is.na(data)] <- 0
 # Crear la escala de color
 color_scale <- viridis::viridis(ncol(data[, -1]))[seq(1, ncol(data[, -1]), by = 1)]
 
-# Create empty plot
+# Crear gráfico vacío
 base::plot(x = data$Year,
 y = seq(0, max(data[, -1], na.rm = TRUE) + 20, length.out = length(data$Year)),
 type = "n",
@@ -89,17 +89,17 @@ las = 1,
 ann = FALSE
 )
 
-# Add labels
+# Añadir etiquetas de los ejes
 mtext(side = 2, text = "Observaciones", line = 2.5, cex = 1.2)
 mtext(side = 1, text = "Año", line = 2.5, cex = 1.2)
 
-# Plot species time series
+# Añadir series temporales de las especies
 spp <- names(data)[-1]
 for (i in seq_along(spp)) {
   lines(x = data$Year, y = data[, spp[i]], col = color_scale[i], lwd = 2)
 }
 
-# Add legend
+# Añadir leyenda
 legend(x = 2005, y = 105,
        legend = spp,
        col = color_scale,
@@ -108,3 +108,29 @@ legend(x = 2005, y = 105,
        cex = 0.6,
        bty = "n"
 )
+
+# Detectar tendencias en las poblaciones estudiadas
+
+par(mfrow = c(5, 4))
+
+for (i in 2:ncol(data)) {
+
+plot.ts(as.ts(data[, i]), main = paste(names(data)[i], "original", sep = " "))
+
+lm <- lm(data[, i] ~ data$Year)
+plot.ts(as.ts(lm$residuals), main = paste(names(data)[i], "sin tendencia", sep = " "))
+
+}
+
+# Cómo de sincrónicas son las poblaciones de reptiles
+# de Doñana?
+
+# Cargar funciones
+source("R/funciones.R")
+
+# Calcular sincronía
+# Phi
+phi(data[, -1])
+
+# Eta
+eta_w(data[, -1])
