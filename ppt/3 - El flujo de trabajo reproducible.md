@@ -65,15 +65,3 @@ paginate: true
 ![bg center 50%](img/markdown_logo.png)
 
 ---
-
-## ¿Cómo integramos los analisis de código en un control de versiones?
-
-Para integrar Github en Rstudio vamos a tener que conectar ambas interfaces. 
-
-**1.** Lo primero de todo, vamos a tener que crearnos una cuenta en github (https://github.com/)
-**2.** Para qie las dos interfaces hablen el mismo idioma y se entiendan tenemos que crear un código personal para integrar una en otra, y esto 
-lo hacemos creando un token. A continuación indicamos los pasos a seguir para crearlo. Es necesario hacer
-.......
-..
-
-------------------------------------------------------------------------
