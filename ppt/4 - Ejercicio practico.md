@@ -16,11 +16,13 @@ paginate: false
 
 ## Prerequisitos
 
-- Instalar Git
-- Instalar R
-- Instalar RStudio
-- Crear perfil en GitHub
-- Vincular RStudio y GitHub
+- Instalar Git: Aquí podeis encontrar el link para descargar Git segun el sistema operativo. https://git-scm.com/downloads
+- Instalar R: Aqui podeis encontrar R para Windows https://cran.r-project.org/bin/windows/base/ y aquí para Mac https://cran.r-project.org/bin/macosx/ 
+- Instalar RStudio: https://posit.co/download/rstudio-desktop/
+- Crear perfil en GitHub: Lo primero de todo, vamos a tener que crearnos una cuenta en github (https://github.com/)
+- Vincular RStudio y GitHub: 
+  **1.** Para que las dos interfaces hablen el mismo idioma y se entiendan tenemos que crear un código personal para integrar una en otra, y esto 
+lo hacemos creando un token. A continuación indicamos los pasos a seguir para crearlo. Es necesario hacer.....
 
 ---
 
