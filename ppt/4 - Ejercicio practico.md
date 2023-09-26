@@ -29,7 +29,21 @@ paginate: false
     1.  Para que las dos interfaces hablen el mismo idioma y se entiendan tenemos que crear un código personal para integrar una en otra, y esto lo hacemos creando un token. A continuación indicamos los pasos a seguir para crearlo.
 
     ![bg center 50%](img/vincular_git_rstudio/paso1_git.png) ![bg center 50%](img/vincular_git_rstudio/paso2.png) ![bg center 50%](img/vincular_git_rstudio/paso3_git.png)
-    2.
+
+    2.Ahora que tenemos creado el token necesitamos ir a la terminal del ordenador nos tenemos que presentar a Git.
+
+    ```{r,include = FALSE}
+       git config --global user.name 'Nombre Apellido' 
+       git config --global user.email '[nombreapellido\@example.com](mailto:nombreapellido@example.com){.email}' 
+       git config --global --list
+
+    ```
+
+    Con `git config user.email` vamos a ver que lista de correo es la asociada a Git y comprobar que todo es correcto.
+
+    3.El siguiente paso es crear un repositorio desde el perfil de Github. Para ello tenemos que seguir los siguientes pasos:
+
+![bg center 50%](img/crear_repositorio/git_repositorio1.png)![bg center 50%](img/crear_repositorio/git_repositorio2.png)
 
 ------------------------------------------------------------------------
 
