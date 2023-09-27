@@ -26,7 +26,7 @@ paginate: true
 
 **Control de calidad:** Plantillas o formularios ayudan a evitar errores al introducir los datos. Ser consistente en los códigos y la estructura.
 
-**Preservación:** Asegurar que nuestros datos seguirán disponibles a largo plazo. Archivo de formato público (txt o csv por ejemplo) en un repostorio con DOI (DRYAD o figshare por ejemplo).
+**Preservación:** Asegurar que nuestros datos seguirán disponibles a largo plazo. Archivo de formato público (txt o csv por ejemplo) en un repostorio con DOI (DRYAD, Zenodo o figshare por ejemplo).
 
 ---
 
