@@ -46,6 +46,7 @@ Hora y lugar
 ---
 
 5 de octubre de 2023, 9:00 am
+AUL.INF. / B.00.04 PALA B PLANTA BAJA
 
 Referencias
 ---
