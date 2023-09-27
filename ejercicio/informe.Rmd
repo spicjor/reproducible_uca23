@@ -29,20 +29,21 @@ https://www.kaggle.com/datasets/leonardopena/top-spotify-songs-from-20102019-by-
 
 ```{r top_artists}
 
-data %>% dplyr::count(artist) %>% arrange(desc(n))
+data %>% dplyr::count(artist) %>% arrange(desc(n)) %>% head()
 
 ```
 
-## Estilo con más éxitos
+## Estilos con más éxitos
 
-```{r top_genre}
+```{r top_genres}
 
-data %>% dplyr::count(top.genre) %>% arrange(desc(n))
+data %>% dplyr::count(top.genre) %>% arrange(desc(n)) %>% head()
 
 ```
+
 ## Tendencia de la duración de los hits
 
-```{r duration_trend, include = FALSE, results = TRUE}
+```{r duration_trend, fig.width=8, fig.height=6}
 
 plot(dur ~ year, data = data)
 abline(lm(dur ~ year, data = data))
