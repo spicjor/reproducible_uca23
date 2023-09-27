@@ -59,7 +59,8 @@ Siempre que compartamos un repositorio con colaboradores tendremos que hacerr Pu
 
 ## Ejercio 1:
 
-Poneros por parejas. Vais a crear un script sencillo, donde pongáis lo que habéis desayunado hoy o vuestro nombre. Vas a hacer un commit explicando brevemente que contiene ese archivo, vais a hacer commit y luego push. La otra persona de la pareja va a descargarse el repositorio y hará pull. Verá el script o la foto y añadirá algo al repositorio. Volverá a hacer commit y push.
+Poneros por parejas. Vais a ir a la carpeta llamada Ejercicio, y tenéis que abrir el archivo que se llama informe.Rmd. Este archivo es un Rmarkdown, es un archivo donde se puede escribir texto pero tambien hay código. El ejercicio consite en modificar este codigo o texto, hacer un commmit explicando brevemente que habéis hecho, y hacer push. Vuestro compañero tiene que hacer pull en su ordenador, modificar otra cosa, hacer commit y push de nuevo. 
+
 
 ## La he liado, ¿cómo puedo deshacer un cambio?
 
@@ -85,16 +86,3 @@ Vamos a crear un script en R para analizar los datos y crear unos resultados des
 
 ------------------------------------------------------------------------
 
-## Integrar con markdown
-
-El código puede estar aislado en un Script o ese código se puede integrar en un markdown, que es un archivo de texto donde se puede introducir partes de código que te generan un ouput directo. Por ejemplo, escribes en el codigo una función para producir un gráfico, pues en el markdown en el ouput unicamente aparece en grafico que se quería ver.
-
-------------------------------------------------------------------------
-
-### Colaboración markdown
-
-Github no solo sirve para compartir códigos, si no que se pueden compartir textos también. De esta manera, se vuelve una interfaz cómoda en la que escribir los articulos científicos y poderla compartir con los colaboradores.
-
-## Ejercicio 3:
-
-Con las mismas parejas creadas antes, vamos a generar un pequeño cambio en el texto de vuestro desayuno o de vuestro nombre, vamos a hacer commit del cambio, y pull y lo vamos a compartir con la otra persona de la pareja. La otra persona tendrá que hacer pull para ver los cambios realizados y modificar alguna otra parte para volver a generar un commit.
