@@ -59,13 +59,29 @@ Siempre que compartamos un repositorio con colaboradores tendremos que hacerr Pu
 
 ## Ejercio 1:
 
-Poneros por parejas. Vais a abrir el script de datos donde se analizan las variaciones de reptieles en un trasecto de Doñana. Modificad el código, haced commit, y push. La otra persona de la pareja tiene que descargarse el script que ha sido moficado y ser capaz de localizar los cambios realizados.
+Poneros por parejas. Vais a crear un script sencillo, donde pongáis lo que habéis desayunado hoy o vuestro nombre. Vas a hacer un commit explicando brevemente que contiene ese archivo, vais a hacer commit y luego push. La otra persona de la pareja va a descargarse el repositorio y hará pull. Verá el script o la foto y añadirá algo al repositorio. Volverá a hacer commit y push.
+
+## La he liado, ¿cómo puedo deshacer un cambio?
+
+Cuando subo a github un cambio que no quería hacer y ya está subido, ¿cómo lo puedo resolver? Lo primero de todo es que tienes que verificar siempre que has hecho el cambio que querias hacer, pero todos nos equivocamos. Hay múltiples opciones pero aquí os vamos a mencionar 3:*restore*, *reset* y *revert*
+
+\- **restore** se usa cuando no has llegado a hacer commit en los cambios
+
+\- **reset/revert** cuando si que has llegado a hacer commit.
+
+Explicamos las funciones mas en detalle:
+
+\- `git restore`: deshace un `git add` y/o los cambios del directorio de trabajo.
+
+\- `git reset`: deshace un `git commit` y/o un `git add` y/o los cambios del directorio de trabajo.
+
+\- `git revert HEAD`: es la opción segura de `git reset` para deshacer un commit ya que no resetea un proyecto a su estado anterior eliminando todos los commits posteriores (es decir, no elimina el historial de commits). Recomendamos usar `git reset` en ramas que no hayan sido compartidas todavía (es decir, que no hayan sido commitidas a un repositorio remoto que otros estén usando). Resetear es cambiar el historial sin dejar rastro. Esto es siempre una mala práctica y puede causar problemas. Si queremos deshacer los cambios en las ramas que se comparten con otros, recomendamos utilizar el comando `git revert`. Con `git revert` quedará constancia de que se ha deshecho un cambio.
 
 ------------------------------------------------------------------------
 
 ## Ejercicio 2: Analizar los datos
 
-Vamos a crear un scriot en R para analizar los datos y crear unos resultados deseado. Para ello vamos a usar la base de datos de Long-term monitoring of lizards and geckos in Doñana 2005-2021(<https://ipt.gbif.es/resource?r=reptdon2005-2021>), en la que recogen datos de reptiles a lo largo de los años en un mismo transecto en Doñana. El objetivo del codigo es sacar un mapa de las observaciones, y sacar gráficos de las series temporales de observaciones por especie y año.
+Vamos a crear un script en R para analizar los datos y crear unos resultados deseado. Para ello vamos a usar la base de datos de Long-term monitoring of lizards and geckos in Doñana 2005-2021(<https://ipt.gbif.es/resource?r=reptdon2005-2021>), en la que recogen datos de reptiles a lo largo de los años en un mismo transecto en Doñana. El objetivo del codigo es sacar un mapa de las observaciones, y sacar gráficos de las series temporales de observaciones por especie y año.
 
 ------------------------------------------------------------------------
 
@@ -81,4 +97,4 @@ Github no solo sirve para compartir códigos, si no que se pueden compartir text
 
 ## Ejercicio 3:
 
-Con las mismas parejas creadas antes, vamos a generar un pequeño cambio en el texto, vamos a ahcer commit del cambio, y pull y lo vamos a compartir con la otra persona de la pareja. La otra persona tendra que hacer pull para ver los cambios realizados y modificar alguna otra parte para volver a generar un commit.
+Con las mismas parejas creadas antes, vamos a generar un pequeño cambio en el texto de vuestro desayuno o de vuestro nombre, vamos a hacer commit del cambio, y pull y lo vamos a compartir con la otra persona de la pareja. La otra persona tendrá que hacer pull para ver los cambios realizados y modificar alguna otra parte para volver a generar un commit.
