@@ -26,18 +26,21 @@ paginate: false
 
 -   Crear perfil en GitHub: Lo primero de todo, vamos a tener que crearnos una cuenta en github (<https://github.com/>)
 
+---
+
 -  Vincular RStudio y GitHub:
 
     1.  Para que las dos interfaces hablen el mismo idioma y se entiendan tenemos que crear un código personal para integrar una en otra, y esto lo hacemos creando un token. A continuación indicamos los pasos a seguir para crearlo.
 
----
-
-![bg center 50%](img/vincular_git_rstudio/paso1_git.png)
+![bg right 40%](img/vincular_git_rstudio/paso1_git.png)
 
 ---
 
-![bg center 50%](img/vincular_git_rstudio/paso2.png)
-![bg center 50%](img/vincular_git_rstudio/paso3_git.png)
+![bg center 65%](img/vincular_git_rstudio/paso2.png)
+
+---
+
+![bg center 80%](img/vincular_git_rstudio/paso3_git.png)
 
 ---
 
@@ -60,11 +63,11 @@ Con `git config user.email` vamos a ver que lista de correo es la asociada a Git
 
 ---
 
-![bg center 50%](img/crear_repositorio/git_repositorio1.png)
+![bg center 90%](img/crear_repositorio/git_repositorio1.png)
 
 ---
 
-![bg center 50%](img/crear_repositorio/git_repositorio2.png)
+![bg center 55%](img/crear_repositorio/git_repositorio2.png)
 
 ---
 
@@ -84,7 +87,7 @@ Siempre que compartamos un repositorio con colaboradores tendremos que hacerr Pu
 
 ---
 
-![bg center 80%](img/commit_push_pull.png)
+![bg center 100%](img/commit_push_pull.png)
 
 ---
 
@@ -92,14 +95,17 @@ Siempre que compartamos un repositorio con colaboradores tendremos que hacerr Pu
 
 Poneros por parejas. Vais a ir a la carpeta llamada Ejercicio, y tenéis que abrir el archivo que se llama informe.Rmd. Este archivo es un Rmarkdown, es un archivo donde se puede escribir texto pero tambien hay código. El ejercicio consite en modificar este codigo o texto, hacer un commmit explicando brevemente que habéis hecho, y hacer push. Vuestro compañero tiene que hacer pull en su ordenador, modificar otra cosa, hacer commit y push de nuevo. 
 
+---
 
 ## La he liado, ¿cómo puedo deshacer un cambio?
 
-Cuando subo a github un cambio que no quería hacer y ya está subido, ¿cómo lo puedo resolver? Lo primero de todo es que tienes que verificar siempre que has hecho el cambio que querias hacer, pero todos nos equivocamos. Hay múltiples opciones pero aquí os vamos a mencionar 3:*restore*, *reset* y *revert*
+Cuando subo a github un cambio que no quería hacer y ya está subido, ¿cómo lo puedo resolver? Lo primero de todo es que tienes que verificar siempre que has hecho el cambio que querias hacer, pero todos nos equivocamos. Hay múltiples opciones pero aquí os vamos a mencionar 3: *restore*, *reset* y *revert*
 
 \- **restore** se usa cuando no has llegado a hacer commit en los cambios
 
 \- **reset/revert** cuando si que has llegado a hacer commit.
+
+---
 
 Explicamos las funciones mas en detalle:
 
@@ -109,11 +115,11 @@ Explicamos las funciones mas en detalle:
 
 \- `git revert HEAD`: es la opción segura de `git reset` para deshacer un commit ya que no resetea un proyecto a su estado anterior eliminando todos los commits posteriores (es decir, no elimina el historial de commits). Recomendamos usar `git reset` en ramas que no hayan sido compartidas todavía (es decir, que no hayan sido commitidas a un repositorio remoto que otros estén usando). Resetear es cambiar el historial sin dejar rastro. Esto es siempre una mala práctica y puede causar problemas. Si queremos deshacer los cambios en las ramas que se comparten con otros, recomendamos utilizar el comando `git revert`. Con `git revert` quedará constancia de que se ha deshecho un cambio.
 
-------------------------------------------------------------------------
+---
 
 ## Ejercicio 2: Analizar los datos
 
 Vamos a crear un script en R para analizar los datos y crear unos resultados deseado. Para ello vamos a usar la base de datos de Long-term monitoring of lizards and geckos in Doñana 2005-2021(<https://ipt.gbif.es/resource?r=reptdon2005-2021>), en la que recogen datos de reptiles a lo largo de los años en un mismo transecto en Doñana. El objetivo del codigo es sacar un mapa de las observaciones, y sacar gráficos de las series temporales de observaciones por especie y año.
 
-------------------------------------------------------------------------
+---
 
