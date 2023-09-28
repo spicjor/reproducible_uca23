@@ -18,11 +18,18 @@
 # Archivo
 # data/donana_reptiles.csv
 
-# Objetivo
+# Objetivos
 
 # 1. Crear un mapa de las observaciones recogidas.
 # 2. Crear un gráfico del número de observaciones
 # por año y especie.
+# 3. Detectar trends en las poblaciones.
+# 4. Calcular sincronía de la comunidad.
+
+
+
+# Si hace falta instalar
+# pacman::p_load(readr, tidyr, dplyr, terra, stringr, maptiles, basemaps, leaflet)
 
 # Cargar los paquetes necesarios
 library(readr)
@@ -32,6 +39,11 @@ library(terra)
 library(stringr)
 library(maptiles)
 library(basemaps)
+library(leaflet)
+
+
+
+# Preparando los datos
 
 # Cargar los datos
 data <- readr::read_delim("data/donana_reptiles.csv", delim = "\t")
@@ -48,14 +60,18 @@ data$scientificName[data$scientificName == "Podarcis carbonelli Perez Mellado, 1
 data$scientificName[data$scientificName == "Psammodromus algirus (Linnaeus, 1758)"] <- "Psammodromus algirus"
 data$scientificName[data$scientificName == "Tarentola mauritanica (Linnaeus, 1758)"] <- "Tarentola mauritanica"
 data$scientificName[data$scientificName == "Acanthodactylus erythrurus (Schinz, 1833)"] <- "Acanthodactylus erythrurus"
-data$scientificName[data$scientificName == "Testudo graeca (Linnaeus, 1758)"] <- "Testudo_graeca"
-data$scientificName[data$scientificName == "Testudo graeca Linnaeus, 1758"] <- "Testudo_graeca"
+data$scientificName[data$scientificName == "Testudo graeca (Linnaeus, 1758)"] <- "Testudo graeca"
+data$scientificName[data$scientificName == "Testudo graeca Linnaeus, 1758"] <- "Testudo graeca"
 data$scientificName[data$scientificName == "Psammodromus occidentalis (Fitze, Gonzalez-Jimena, San Jose, San Mauro & Zardoya, 2012)"] <- "Psammodromus occidentalis"
 data$scientificName[data$scientificName == "Psammodromus occidentalis Fitze, Gonzalez-Jimena, San-Jose, San Mauro & Zardoya, 2012"] <- "Psammodromus occidentalis"
 data$scientificName[data$scientificName == "Timon lepidus (Daudin, 1802)"] <- "Timon lepidus"
 data$scientificName[data$scientificName == "Hemorrhois hippocrepis (Linnaeus, 1758)"] <- "Hemorrhois hippocrepis"
 data$scientificName[data$scientificName == "Chalcides striatus (Cuvier, 1829)"] <- "Chalcides striatus"
 data$scientificName[data$scientificName == "Malpolon monspessulanus (Hermann, 1804)"] <- "Malpolon monspessulanus"
+
+
+
+# 1. Crear un mapa de las observaciones recogidas.
 
 # Crear un objeto espacial con las coordenadas de
 # las observaciones
@@ -76,17 +92,23 @@ points(obs, col = "#003366")
 north("topright", type = 1)
 
 # Añadir escala
-sbar(10, "bottom", type = "bar", labels = c("0", "5", "10 km"))
+sbar(10, "bottom", type = "bar", below = "km", label = c(0, 5, 10), cex = 0.8)
 
 # Añadir inset
 spain <- vect("data/ll_autonomicas_inspire_peninbal_etrs89.shp",
               crs = "epsg:4258")
+
 inset(spain, loc = "bottomleft",
              box = ext(c(-7.25, -5.75, 36, 37)),
              pbox = list(col="red", lwd = 2))
 
 # Cerrar pdf
 dev.off()
+
+
+
+# 2. Crear un gráfico del número de observaciones
+# por año y especie.
 
 # Calcular las observaciones por año y especie
 # Crear variable año a partir del campo fecha
@@ -102,6 +124,8 @@ data <- data %>% group_by(Year, scientificName) %>%
 
 # Cambiar NAs por ceros
 data[is.na(data)] <- 0
+
+
 
 # Crear gráfico de las series temporales
 # Crear la escala de color
@@ -141,26 +165,59 @@ legend(x = 2005, y = 105,
 # Cerrar pdf
 dev.off()
 
-# Detectar tendencias en las poblaciones estudiadas
 
-par(mfrow = c(5, 4))
 
+# 3. Detectar trends en las poblaciones.
+
+# Abrir pdf
+pdf("results/trends.pdf", width = 8, height = 4)
+
+# Definir filas y columnas del multiplot
+par(mfrow = c(2, 5))
+
+# Crear plots
 for (i in 2:ncol(data)) {
 
-plot.ts(as.ts(data[, i]), main = paste(names(data)[i], "original", sep = " "))
+# Plot vacío
+base::plot(x = data$Year,
+y = seq(0, max(data[, i], na.rm = TRUE), length.out = length(data$Year)),
+type = "n",
+las = 1,
+ann = FALSE
+)
 
+# Añadir línea
+lines(x = data$Year, y = data[, i])
+
+# Calcular tendencia
 lm <- lm(data[, i] ~ data$Year)
-plot.ts(as.ts(lm$residuals), main = paste(names(data)[i], "sin tendencia", sep = " "))
 
+# Añadir línea de tendencia
+abline(a = lm$coefficients[1], b = lm$coefficients[2], lwd = 2, col = "red")
+
+# Añadir título
+mtext(paste(str_sub(names(data)[i], 1, 3),
+            " ",
+            str_sub(sub(".*\\s", "", names(data)[i]), 1, 3),
+            sep = ""),
+      side = 3,
+      line = 1,
+      cex = 0.8
+)
 }
 
-# Cómo de sincrónicas son las poblaciones de reptiles
-# de Doñana?
+# Cerrar pdf
+dev.off()
+
+
+
+# 4. Calcular sincronía de la comunidad.
 
 # Cargar funciones
 source("R/funciones.R")
 
 # Calcular sincronía
+
 # Phi
 phi(data[, -1])
 
