@@ -24,6 +24,9 @@
 # 2. Crear un gráfico del número de observaciones
 # por año y especie.
 
+# Instalar paquetes si es necesario
+# pacman::p_load(readr, tidyr, dplyr, terra, stringr, maptiles, basemaps, janitor)
+
 # Cargar los paquetes necesarios
 library(readr)
 library(tidyr)
@@ -32,6 +35,7 @@ library(terra)
 library(stringr)
 library(maptiles)
 library(basemaps)
+library(janitor)
 
 # Cargar los datos
 data <- readr::read_delim("data/donana_reptiles.csv", delim = "\t")
@@ -141,18 +145,7 @@ legend(x = 2005, y = 105,
 # Cerrar pdf
 dev.off()
 
-# Detectar tendencias en las poblaciones estudiadas
 
-par(mfrow = c(5, 4))
-
-for (i in 2:ncol(data)) {
-
-plot.ts(as.ts(data[, i]), main = paste(names(data)[i], "original", sep = " "))
-
-lm <- lm(data[, i] ~ data$Year)
-plot.ts(as.ts(lm$residuals), main = paste(names(data)[i], "sin tendencia", sep = " "))
-
-}
 
 # Cómo de sincrónicas son las poblaciones de reptiles
 # de Doñana?
@@ -162,7 +155,25 @@ source("R/funciones.R")
 
 # Calcular sincronía
 # Phi
-phi(data[, -1])
+janitor::round_half_up(phi(data[, -1]), 2)
 
 # Eta
-eta_w(data[, -1])
+janitor::round_half_up(eta_w(data[, -1]), 2)
+
+
+# Detectar tendencias en las poblaciones estudiadas
+
+# Definir plot de 5 filas, 4 columnas
+par(mfrow = c(5, 4))
+
+# Crear loop
+for (i in 2:ncol(data)) {
+
+
+  plot.ts(as.ts(data[, i]), main = paste(names(data)[i], "original", sep = " "))
+
+  lm <- lm(data[, i] ~ data$Year)
+  plot.ts(as.ts(lm$residuals), main = paste(names(data)[i], "sin tendencia", sep = " "))
+
+}
+

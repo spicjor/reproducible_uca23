@@ -1,14 +1,13 @@
 ---
 title: "Seguimiento a largo plazo de reptiles en Doñana 2005-2021"
-author: "Sergio Picó Jordá y María Hurtado de Mendoza Romo"
+author: Sergio Picó Jordá^[Universidad de Cádiz, sergio.pico@uca.es],
+        María Hurtado de Mendoza Romo^[Universidad de Cádiz, maria.hurtadodemendoza@uca.es]
 output: html_document
 ---
 
 ```{r setup, include = FALSE}
 
-knitr::opts_chunk$set(echo = FALSE)
-
-options(width = 10)
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 
 # Cargar los paquetes necesarios
 library(readr)
@@ -16,6 +15,10 @@ library(tidyr)
 library(dplyr)
 library(terra)
 library(stringr)
+library(janitor)
+
+# Cargar archivo de funciones
+source("R/funciones.R")
 
 ```
 
@@ -23,9 +26,17 @@ library(stringr)
 
 ## Introducción
 
-El monitoreo anual de reptiles en el Espacio Natural de Doñana (END) se inició en el año 2005 con el objetivo de detectar cambios y tendencias en las poblaciones de estos animales.
+El monitoreo anual de reptiles en el Espacio Natural de Doñana (END) se inició
+en el año 2005 con el objetivo de detectar cambios y tendencias en las
+poblaciones de estos animales.
 
-El monitoreo se hace anualmente en primavera y otoño realizando 7 transectos en distintos hábitats, durante los que se registran todas las observaciones de las especie de interés.
+El monitoreo se hace anualmente en primavera y otoño realizando 7 transectos
+en distintos hábitats, durante los que se registran todas las observaciones
+de las especie de interés.
+
+DOI: https://doi.org/10.15470/ki0cn7
+
+
 
 ## Distribución espacial de las observaciones
 
@@ -86,6 +97,8 @@ data[is.na(data)] <- 0
 
 ## Tendencias temporales de las especies estudiadas
 
+Las especies muestran fluctuaciones anuales que parecen estar correlacionadas, probablemente por un efecto común de variables ambientales.
+
 ```{r grafico series, results = TRUE, warning = FALSE}
 # Crear gráfico de las series temporales
 # Crear la escala de color
@@ -123,3 +136,21 @@ legend(x = 2005, y = 105,
 Figura 2. Tendencias temporales de las especies estudiadas en el periodo
 2005-2021.
 
+
+
+# Sincronía de las poblaciones de reptiles de Doñana
+
+Calculamos dos métricas de sincronía basadas en el ratio de la varianza de la comunidad y la varianza de las especies (phi) y en la correlación media (eta). Ambas nos indican que la comunidad tiene sincronía alta, pues phi tiene rango de 0 (mínima sincronía) a 1 (máxima sincronía) y eta de -1 (máxima asincronía) a 1 (máxima sincronía).
+
+``` {r synchrony, echo = FALSE}
+
+paste("Phi =", janitor::ro(phi(data[, -1]), digits = 2), sep = " ")
+
+paste("Eta =", phi(data[, -1]), sep = " ")
+
+```
+
+
+# Detección de tendencias poblacionales
+
+Aplicamos regresiones lineales a los datos de cada especie para tratar de detectar si existen tendencias.
