@@ -1,7 +1,6 @@
 # Ejemplo de análisis de datos
-# Datos:
 
-# Long-term monitoring of lizards and geckos
+# Datos: Long-term monitoring of lizards and geckos
 # in Doñana 2005-2021
 
 # El monitoreo anual de reptiles en el Espacio
@@ -15,24 +14,20 @@
 
 # DOI: https://doi.org/10.15470/ki0cn7
 
-# Archivo
-# data/donana_reptiles.csv
+# Archivo: data/donana_reptiles.csv
 
 # Objetivos
 
 # 1. Crear un mapa de las observaciones recogidas.
 # 2. Crear un gráfico del número de observaciones
 # por año y especie.
-
-# Instalar paquetes si es necesario
-# pacman::p_load(readr, tidyr, dplyr, terra, stringr, maptiles, basemaps, janitor)
 # 3. Detectar trends en las poblaciones.
 # 4. Calcular sincronía de la comunidad.
 
 
 
-# Si hace falta instalar
-# pacman::p_load(readr, tidyr, dplyr, terra, stringr, maptiles, basemaps, leaflet)
+# Instalar paquetes si es necesario
+# pacman::p_load(readr, tidyr, dplyr, terra, stringr, maptiles, basemaps, leaflet, janitor)
 
 # Cargar los paquetes necesarios
 library(readr)
@@ -43,11 +38,11 @@ library(stringr)
 library(maptiles)
 library(basemaps)
 library(leaflet)
+library(janitor)
 
 
 
 # Preparando los datos
-library(janitor)
 
 # Cargar los datos
 data <- readr::read_delim("data/donana_reptiles.csv", delim = "\t")
@@ -128,8 +123,6 @@ data <- data %>% group_by(Year, scientificName) %>%
 
 # Cambiar NAs por ceros
 data[is.na(data)] <- 0
-
-
 
 # Crear gráfico de las series temporales
 # Crear la escala de color
@@ -227,21 +220,3 @@ janitor::round_half_up(phi(data[, -1]), 2)
 
 # Eta
 janitor::round_half_up(eta_w(data[, -1]), 2)
-
-
-# Detectar tendencias en las poblaciones estudiadas
-
-# Definir plot de 5 filas, 4 columnas
-par(mfrow = c(5, 4))
-
-# Crear loop
-for (i in 2:ncol(data)) {
-
-
-  plot.ts(as.ts(data[, i]), main = paste(names(data)[i], "original", sep = " "))
-
-  lm <- lm(data[, i] ~ data$Year)
-  plot.ts(as.ts(lm$residuals), main = paste(names(data)[i], "sin tendencia", sep = " "))
-
-}
-

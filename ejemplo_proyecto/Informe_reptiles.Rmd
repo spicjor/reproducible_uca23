@@ -15,6 +15,9 @@ library(tidyr)
 library(dplyr)
 library(terra)
 library(stringr)
+library(maptiles)
+library(basemaps)
+library(leaflet)
 library(janitor)
 
 # Cargar archivo de funciones
@@ -76,6 +79,7 @@ obs <- terra::vect(data, geom = c(x = "decimalLongitude", y = "decimalLatitude")
 # Crear mapa interactivo con leaflet
 terra::plet(obs, col = "#003366")
 ```
+
 Figura 1. Mapa de las observaciones registradas
 
 ```{r preparar series, include = FALSE}
@@ -94,6 +98,8 @@ data <- data %>% group_by(Year, scientificName) %>%
 # Cambiar NAs por ceros
 data[is.na(data)] <- 0
 ```
+
+
 
 ## Tendencias temporales de las especies estudiadas
 
@@ -138,19 +144,63 @@ Figura 2. Tendencias temporales de las especies estudiadas en el periodo
 
 
 
+# Detección de tendencias poblacionales
+
+Aplicamos regresiones lineales a los datos de cada especie para tratar de detectar si existen tendencias.
+
+```{r trends, results = TRUE, warning = FALSE}
+
+# Definir filas y columnas del multiplot
+par(mfrow = c(2, 5))
+
+# Crear plots
+for (i in 2:ncol(data)) {
+
+# Plot vacío
+base::plot(x = data$Year,
+y = seq(0, max(data[, i], na.rm = TRUE), length.out = length(data$Year)),
+type = "n",
+las = 1,
+ann = FALSE
+)
+
+# Añadir línea
+lines(x = data$Year, y = data[, i])
+
+# Calcular tendencia
+lm <- lm(data[, i] ~ data$Year)
+
+# Añadir línea de tendencia
+abline(a = lm$coefficients[1], b = lm$coefficients[2], lwd = 2, col = "red")
+
+# Añadir título
+mtext(paste(str_sub(names(data)[i], 1, 3),
+            " ",
+            str_sub(sub(".*\\s", "", names(data)[i]), 1, 3),
+            sep = ""),
+      side = 3,
+      line = 1,
+      cex = 0.8
+)
+}
+
+```
+
+Figura 3. Detalle de las poblaciones estudiadas. En cada caso, la tendencia
+está representada por la línea roja.
+
+
+
 # Sincronía de las poblaciones de reptiles de Doñana
 
 Calculamos dos métricas de sincronía basadas en el ratio de la varianza de la comunidad y la varianza de las especies (phi) y en la correlación media (eta). Ambas nos indican que la comunidad tiene sincronía alta, pues phi tiene rango de 0 (mínima sincronía) a 1 (máxima sincronía) y eta de -1 (máxima asincronía) a 1 (máxima sincronía).
 
 ``` {r synchrony, echo = FALSE}
 
-paste("Phi =", janitor::ro(phi(data[, -1]), digits = 2), sep = " ")
+paste("Phi =", janitor::round_half_up(phi(data[, -1]), 2), sep = "")
 
-paste("Eta =", phi(data[, -1]), sep = " ")
+paste("Eta =", janitor::round_half_up(eta_w(data[, -1]), 2), sep = "")
 
 ```
 
 
-# Detección de tendencias poblacionales
-
-Aplicamos regresiones lineales a los datos de cada especie para tratar de detectar si existen tendencias.
