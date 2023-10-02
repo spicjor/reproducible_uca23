@@ -142,6 +142,10 @@ Necesitamos cambiar la manera en que trabajamos por un **flujo de trabajo reprod
 
 ---
 
+![bg center 100%](img/good_table.png)
+
+---
+
 ## Control de versión
 
 ![bg right 85%](img/phd_controlversion.gif)
@@ -149,7 +153,7 @@ Necesitamos cambiar la manera en que trabajamos por un **flujo de trabajo reprod
 ---
 ## Control de versión: Local
 
-![bg center 80%](img/git_logo.png)
+![bg center 70%](img/git_logo.png)
 
 ---
 
@@ -179,7 +183,7 @@ Necesitamos cambiar la manera en que trabajamos por un **flujo de trabajo reprod
 
 ## Manuscritos reproducibles
 
-![bg center 50%](img/markdown_logo.png)
+![bg center 40%](img/markdown_logo.png)
 
 ---
 
