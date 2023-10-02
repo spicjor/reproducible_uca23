@@ -129,7 +129,7 @@ data[is.na(data)] <- 0
 color_scale <- viridis::viridis(ncol(data[, -1]))[seq(1, ncol(data[, -1]), by = 1)]
 
 # Abrir pdf en blanco
-pdf("results/series.pdf", width = 6, height = 4)
+pdf("results/series.pdf", width = 6, height = 5)
 
 # Crear gráfico vacío
 base::plot(x = data$Year,
@@ -155,7 +155,7 @@ legend(x = 2005, y = 105,
        col = color_scale,
        pch = "-",
        lwd = 3,
-       cex = 0.4,
+       cex = 0.6,
        bty = "n"
 )
 
