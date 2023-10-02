@@ -117,8 +117,4 @@ Explicamos las funciones mas en detalle:
 
 ------------------------------------------------------------------------
 
-## Ejercicio 2: Analizar los datos
-
-Hemos generado un script simple para analizar unos datos de Long-term monitoring of lizards and geckos in Doñana 2005-2021(<https://ipt.gbif.es/resource?r=reptdon2005-2021>), en la que recogen datos de reptiles a lo largo de los años en un mismo transecto en Doñana. El objetivo del código es sacar un mapa de las observaciones, y sacar gráficos de las series temporales de observaciones por especie y año.
-
-------------------------------------------------------------------------
+## 
