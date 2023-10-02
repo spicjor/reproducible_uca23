@@ -30,6 +30,11 @@ paginate: true
 
 ---
 
+## Control de versión
+
+![bg right 85%](img/phd_controlversion.gif)
+
+---
 ## Control de versión: Local
 
 ![bg center 80%](img/git_logo.png)
@@ -65,3 +70,5 @@ paginate: true
 ![bg center 50%](img/markdown_logo.png)
 
 ---
+
+![bg center 70%](img/ex_markdown.png)
