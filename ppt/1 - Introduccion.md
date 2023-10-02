@@ -78,10 +78,13 @@ Fabricación de datos detectada gracias al requisito de publicar los datos bruto
 <!--_paginate: false -->
 <!--_class: lead -->
 
-# 2. La ciencia rep
+# 2. Ciencia reproducible
+
+---
+
 ## 2.1 Qué es la ciencia reproducible
 
-**Reproducible (reproducibility):**
+**Reproducible (reproducibility, computational reproducibility):**
 
 "Un estudio es reproducible si el texto del artículo viene acompañado de código... ...que permite recrear exactamente a partir de los datos originales todos los resultados y figuras incluidos en el artículo."
 
@@ -115,11 +118,15 @@ Necesitamos cambiar la manera en que trabajamos por un **flujo de trabajo reprod
 
 ---
 
-# El flujo de trabajo reproducible
+# 3. El flujo de trabajo reproducible
 
 ---
 
-## El principio: los datos
+## 3.1. Buenas prácticas con datos y código
+
+---
+
+### El principio: los datos
 
 **Planificar:** Cómo se van a obtener, recoger, almacenar y compartir los datos.
 
