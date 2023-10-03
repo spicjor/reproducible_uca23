@@ -6,25 +6,36 @@ backgroundColor: #fff
 paginate: true
 ---
 
-**Sergio Picó Jorda**
-
--   FPI UCA. Doctorado sobre Ecología
-
--   INMAR
-
--   Github: spicjor
+# Quiénes somos
 
 **María Hurtado de Mendoza Romo**
 
--   FPI Plan Estatal. Doctorado sobre Ecología.
+-   FPI Plan Estatal, ecología (INMAR y EBD).
+-   Github: https://github.com/MariaHdMR
 
--   INMAR y EBD (Estación Biológica de Doñana)
+**Sergio Picó Jorda**
 
--   Github: MariaHdMR
+-   FPI UCA, ecología (INMAR).
+-   Github: https://github.com/spicjor
 
-Repositorio curso: <https://github.com/spicjor/reproducible_uca23> En este repositorio podéis encontrar todos los materiales que vamos a usar durante el curso.
+---
 
-\-\--
+# Repositorio curso
+
+https://github.com/spicjor/reproducible_uca23
+
+En este repositorio podéis encontrar todos los materiales que vamos a usar durante el curso.
+
+---
+
+## Objetivos
+
+1. Entender los motivos de la crisis de reproducibilidad en ciencia.
+2. Conocer los fundamentos de la ciencia reproducible.
+3. Aprender a usar los elementos básicos de un flujo de trabajo reproducible.
+4. Aprender el uso básico del control de versión con Git y GitHub.
+
+---
 
 <!--_paginate: false -->
 
@@ -142,11 +153,9 @@ Necesitamos cambiar la manera en que trabajamos por un **flujo de trabajo reprod
 
 # 3. El flujo de trabajo reproducible
 
-------------------------------------------------------------------------
-
 ## 3.1. Buenas prácticas con datos y código
 
-------------------------------------------------------------------------
+---
 
 ### El principio: los datos
 
@@ -162,50 +171,60 @@ Necesitamos cambiar la manera en que trabajamos por un **flujo de trabajo reprod
 
 **Preservación:** Asegurar que nuestros datos seguirán disponibles a largo plazo. Archivo de formato público (txt o csv por ejemplo) en un repostorio con DOI (DRYAD, Zenodo o figshare por ejemplo).Estos datos muchas veces se pueden vincular con el artículo donde se han estudiado estos datos.
 
-------------------------------------------------------------------------
+---
 
 ![bg center 100%](img/good_table.png)
 
-------------------------------------------------------------------------
+---
 
-## Control de versión
+### Buenas prácticas escribiendo código
+
+ - Antes de empezar:
+    - Estructura de carpetas
+    - Añadir Readme
+    - Añadir licencia
+ - Durante:
+    - COMENTAR, COMENTAR, COMENTAR Y COMENTAR.
+    - Citar software y paquetes (con versión!).
+     
+---
+
+## 3.2 Control de versión con Git
 
 ![bg right 85%](img/phd_controlversion.gif)
 
 ---
-## Control de versión: Local
 
 ![bg center 70%](img/git_logo.png)
+
 ---
 
 ![bg center 95%](img/snapshots.png)
 
-------------------------------------------------------------------------
+---
 
-## Control de versión: En la nube
+## 3.3 Integración con RStudio y Github
 
-![bg center 80%](img/github_2.png)
+![bg center 30%](img/r_logo.png)
 
-------------------------------------------------------------------------
-
-![bg center](img/github_repo.png)
-
-------------------------------------------------------------------------
-
-## Análisis en código
-
-![bg center 40%](img/r_logo.png)
-
-------------------------------------------------------------------------
+---
 
 ![bg center](img/rstudio.png)
 
-------------------------------------------------------------------------
+---
 
-## Manuscritos reproducibles
+![bg center 80%](img/github_2.png)
+
+---
+
+![bg center](img/github_repo.png)
+
+---
+
+## 3.4 Redacción de artículos reproducibles
 
 ![bg center 40%](img/markdown_logo.png)
 
-------------------------------------------------------------------------
+---
 
 ![bg center 70%](img/ex_markdown.png)
