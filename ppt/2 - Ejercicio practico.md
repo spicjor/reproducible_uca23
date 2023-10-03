@@ -91,11 +91,9 @@ Siempre que compartamos un repositorio con colaboradores tendremos que hacer Pul
 
 ------------------------------------------------------------------------
 
-Cuando hacemos commit se ven los cambios que hemos realizado, si hemos añadido algo aparece en verde, mientras que si lo hemos eliminado aparece en rojo. 
+Cuando hacemos commit se ven los cambios que hemos realizado, si hemos añadido algo aparece en verde, mientras que si lo hemos eliminado aparece en rojo.
 
-
-
-
+![bg center 100%](img/cambios_commit.png)
 
 ------------------------------------------------------------------------
 
