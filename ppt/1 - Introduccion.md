@@ -179,6 +179,14 @@ Necesitamos cambiar la manera en que trabajamos por un **flujo de trabajo reprod
 
 ### Buenas prácticas escribiendo código
 
+ - Antes de empezar:
+    - Estructura de carpetas
+    - Añadir Readme
+    - Añadir licencia
+ - Durante:
+    - COMENTAR, COMENTAR, COMENTAR Y COMENTAR.
+    - Citar software y paquetes (con versión!).
+     
 ---
 
 ## 3.2 Control de versión con Git
