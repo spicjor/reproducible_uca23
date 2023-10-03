@@ -24,7 +24,7 @@ paginate: false
 
 ------------------------------------------------------------------------
 
--   Crear perfil en GitHub: Lo primero de todo, vamos a tener que crearnos una cuenta en github (<https://github.com/>)
+-   Crear perfil en GitHub: Lo primero de todo, vamos a tener que crearnos una cuenta en github (<https://github.com/>). CONSEJO: Crearos un nombre que ya useis en otro sitio, por ejemplo, Twitter. QUe sea un nombre de usuario sencillo, recomendable todo en minúsculas.
 
 ------------------------------------------------------------------------
 
@@ -91,9 +91,11 @@ Siempre que compartamos un repositorio con colaboradores tendremos que hacer Pul
 
 ------------------------------------------------------------------------
 
-## Ejercio 1:
+Cuando hacemos commit se ven los cambios que hemos realizado, si hemos añadido algo aparece en verde, mientras que si lo hemos eliminado aparece en rojo. 
 
-Poneros por parejas. Vais a ir a la carpeta llamada Ejercicio, y tenéis que abrir el archivo que se llama informe.Rmd. Este archivo es un Rmarkdown, es un archivo donde se puede escribir texto pero también hay código. El ejercicio consite en modificar este codigo o texto, hacer un commmit explicando brevemente que habéis hecho, y hacer push. Vuestro compañero tiene que hacer pull en su ordenador, modificar otra cosa, hacer commit y push de nuevo.
+
+
+
 
 ------------------------------------------------------------------------
 
@@ -117,4 +119,6 @@ Explicamos las funciones mas en detalle:
 
 ------------------------------------------------------------------------
 
-## 
+## Ejercio 1:
+
+Poneros por parejas. Vais a ir a la carpeta llamada Ejercicio, y tenéis que abrir el archivo que se llama informe.Rmd. Este archivo es un Rmarkdown, es un archivo donde se puede escribir texto pero también hay código. El ejercicio consite en modificar este codigo o texto, hacer un commmit explicando brevemente que habéis hecho, y hacer push. Vuestro compañero tiene que hacer pull en su ordenador, modificar otra cosa, hacer commit y push de nuevo.
