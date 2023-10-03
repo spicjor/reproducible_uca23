@@ -117,6 +117,14 @@ Explicamos las funciones mas en detalle:
 
 ------------------------------------------------------------------------
 
-## Ejercio 1:
+## ejercicio
 
-Poneros por parejas. Vais a ir a la carpeta llamada Ejercicio, y tenéis que abrir el archivo que se llama informe.Rmd. Este archivo es un Rmarkdown, es un archivo donde se puede escribir texto pero también hay código. El ejercicio consite en modificar este codigo o texto, hacer un commmit explicando brevemente que habéis hecho, y hacer push. Vuestro compañero tiene que hacer pull en su ordenador, modificar otra cosa, hacer commit y push de nuevo.
+Cada integrante del equipo independientemente:
+
+1.  Realiza algunos cambios en el script que creaste en el ejercicio 2 o en el README.txt
+
+2.  Realiza un commit de los cambios y prueba hacer `git reset --soft HEAD\~1`
+
+3.  Realiza otro commit y prueba hacer `git reset --mixed HEAD\~1`
+
+4.  Realiza un último commit y prueba hacer `git reset --hard HEAD\~1`
