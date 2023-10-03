@@ -45,7 +45,7 @@ En este repositorio podéis encontrar todos los materiales que vamos a usar dura
 
 # 1. La crisis de reproducibilidad
 
-------------------------------------------------------------------------
+---
 
 # ¿Qué es la crisis de reproducibilidad?
 
@@ -55,7 +55,7 @@ De una encuesta a 1576 investigadores en Nature (2016):
 
 Baker, M., Penny, D. (2016). Is there a reproducibility crisis? *Nature*, 533, 452-454.
 
-------------------------------------------------------------------------
+---
 
 # Business as usual
 
@@ -63,15 +63,15 @@ Baker, M., Penny, D. (2016). Is there a reproducibility crisis? *Nature*, 533, 4
 
 ![bg right 100%](img/macarthur_paper.png)
 
-------------------------------------------------------------------------
+---
 
 # Business as usual
 
-No datos brutos y métodos poco detallados = irreproducible
+No datos brutos y métodos poco detallados = irreproducible.
 
 ![bg right 110%](img/macarthur_plot.png)
 
-------------------------------------------------------------------------
+---
 
 # Efectos no solo académicos
 
@@ -79,7 +79,7 @@ Errores que se propagan a la política económica mundial (5000 citas en Google 
 
 ![bg right 140%](img/debtgrowth_paper.png)
 
-------------------------------------------------------------------------
+---
 
 # Efectos no solo académicos
 
@@ -89,19 +89,19 @@ Si se hubiera seguido una metodología reproducible, probablemente se habría ev
 
 ![bg right 120%](img/critique_debt.png)
 
-------------------------------------------------------------------------
+---
 
 # Muchos más ejemplos
 
-Excel corrigiendo nombres de genes en miles de artículos
+Excel corrigiendo nombres de genes en miles de artículos.
 
 ![bg right 100%](img/genes_excel.png)
 
-------------------------------------------------------------------------
+---
 
 # Muchos más ejemplos
 
-Fabricación de datos detectada gracias al requisito de publicar los datos brutos
+Fabricación de datos detectada gracias al requisito de publicar los datos brutos.
 
 ![bg right 100%](img/pruitt_data.png)
 
