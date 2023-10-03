@@ -118,9 +118,7 @@ El flujo de trabajo habitual debe ser:
 
 ---
 
-Cuando hacemos commit se ven los cambios que hemos realizado, si hemos añadido algo aparece en verde, mientras que si lo hemos eliminado aparece en rojo.
-
-![bg right 100%](img/cambios_commit.png)
+![bg center 90%](img/cambios_commit.png)
 
 ---
 
@@ -134,7 +132,7 @@ Si he hecho un cambio que deseo eliminar, hay múltiples opciones:
 
 - `revert HEAD`: es la opción segura de `git reset` para deshacer un commit ya que no resetea un proyecto a su estado anterior eliminando todos los commits posteriores (es decir, no elimina el historial de commits). Recomendamos usar `git reset` en ramas que no hayan sido compartidas todavía (es decir, que no hayan sido commitidas a un repositorio remoto que otros estén usando). Resetear es cambiar el historial sin dejar rastro. Esto es siempre una mala práctica y puede causar problemas. Si queremos deshacer los cambios en las ramas que se comparten con otros, recomendamos utilizar el comando `git revert`. Con `git revert` quedará constancia de que se ha deshecho un cambio.
 
-------------------------------------------------------------------------
+---
 
 ## ejercicio
 
