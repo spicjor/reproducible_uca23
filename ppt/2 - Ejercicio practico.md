@@ -123,8 +123,8 @@ Cada integrante del equipo independientemente:
 
 1.  Realiza algunos cambios en el script que creaste en el ejercicio 2 o en el README.txt
 
-2.  Realiza un commit de los cambios y prueba hacer git reset --soft HEAD\~1
+2.  Realiza un commit de los cambios y prueba hacer `git reset --soft HEAD\~1`
 
-3.  Realiza otro commit y prueba hacer git reset --mixed HEAD\~1
+3.  Realiza otro commit y prueba hacer `git reset --mixed HEAD\~1`
 
-4.  Realiza un último commit y prueba hacer git reset --hard HEAD\~1
+4.  Realiza un último commit y prueba hacer `git reset --hard HEAD\~1`
