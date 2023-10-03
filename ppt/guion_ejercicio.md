@@ -52,3 +52,21 @@ brew install git
 -   Windows
 
 -   MAC <https://cran.r-project.org/bin/macosx/>
+
+## Github
+
+Una vez tenemos los programas intalados hay que ir a la pagina de Github y que cada alumno se cree un usuario y un perfil. Hay que recordarles que el nombre esta bien que sea uno que ya este asociado, por ejmplo, el nombre que tengan en Twitter. Es recomendable que el nombre este todo escrito en minusculas. La cuenta de Github de estudiantes o de personal de la universidad se puede hacer pro, validando la cuenta con un correo de la instucion. IMPORTANTE: el correo es bueno que sea uno personal, o que no sea temporal, es decir, quieres que tu cuenta de Github dure toda la vida independientemente de la entidad para la que trabajes, por lo que vinvulala a un correo externo.
+
+## Vincular R y Git
+
+Ahora que tenemmos cuenta en Github, y tenemos instalados el resto de programas, lo que queremos hacer es que sean capaces de comunicarse entre ellos.
+
+Para ello lo primero que tenemos que hacer es crear una cuenta en Git, que vamos a poder hacer desde la consola de Git o desde la consola de R. Escribiremos el correo (el mismo que el de github) y nuestro nombre de usuario.
+
+Una vez hecho esto, y comprobando que nos lo ha reconocido, ya estarian conectados. Tenemos que fijarnos que en la pestaña superior derecha, una de las pestañas sea Git, si aparece es que lo hemos hecho bien.
+
+## Crear un repositorio
+
+ya que tenemos todo conectado, vamos a crear un repositorio para analizar el top hits de spotify.
+
+Vamos a github y creamos un nuevo repositorio. Explicamos las caracteristicas que debe tener un repositorio, por ejemplo, que es super recomendable crear siempre un Read.me donde cuentas de que va a ir el proyecto, las personas involucradas, los datos que vas a usar y eso. El nombre del proyecto es importante que sea sencillo, escrito en minusculas y tratando de evitar los espacios. De manera general en la programacion los espacios pueden generar problemas, os recomendamos que pongais guiones o barrabajas en su defecto.
