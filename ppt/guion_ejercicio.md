@@ -114,3 +114,33 @@ Una de las ventajas de Github es poder compartir los repositorios con otras pers
 -   el compañero tendrá que hacer pull y ver qué cambios ha realizado el compañero en su documento.
 
 ## ¿y si hago commit y push de algo que no quería?
+
+Hay múltiples opciones pero aquí os vamos a mencionar 3: *restore*, *reset* y *revert*
+
+-   restore se usa cuando no has llegado a hacer commit con los cambios.
+
+-   reset/revert cuando si que has llegado a hacer commit
+
+Explicamos las funciones mas en detalle:
+
+\- `git restore`: deshace un `git add` y/o los cambios del directorio de trabajo.
+
+\- `git reset`: deshace un `git commit` y/o un `git add` y/o los cambios del directorio de trabajo.
+
+\- `git revert HEAD`: es la opción segura de `git reset` para deshacer un commit ya que no resetea un proyecto a su estado anterior eliminando todos los commits posteriores (es decir, no elimina el historial de commits). Recomendamos usar `git reset` en ramas que no hayan sido compartidas todavía (es decir, que no hayan sido commitidas a un repositorio remoto que otros estén usando). Resetear es cambiar el historial sin dejar rastro. Esto es siempre una mala práctica y puede causar problemas. Si queremos deshacer los cambios en las ramas que se comparten con otros, recomendamos utilizar el comando `git revert`. Con `git revert` quedará constancia de que se ha deshecho un cambio.
+
+## ejercicio
+
+Cada integrante del equipo independientemente:
+
+1\. Realiza algunos cambios en el script que creaste en el ejercicio 2 o en el README.txt
+
+2\. Realiza un commit de los cambios y prueba hacer `git reset --soft HEAD~1`
+en soft  los cambios quedan staged
+
+3\. Realiza otro commit y prueba hacer `git reset --mixed HEAD~1`
+mixed hace unstaged
+
+4\. Realiza un último commit y prueba hacer `git reset --hard HEAD~1`
+hard te devuelve al estado del anterior commit (pierdes los cambios que hayas hecho desde entonces)
+
