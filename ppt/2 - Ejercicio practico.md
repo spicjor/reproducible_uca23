@@ -12,11 +12,11 @@ paginate: false
 
 # Ejercicio práctico
 
-------------------------------------------------------------------------
+---
 
 ## Prerequisitos
 
--   Instalar Git: Aquí podeis encontrar el link para descargar Git segun el sistema operativo. <https://git-scm.com/downloads>
+- **Instalar Git:** <https://git-scm.com/downloads>
 
 -   Instalar R: Aqui podeis encontrar R para Windows <https://cran.r-project.org/bin/windows/base/> y aquí para Mac <https://cran.r-project.org/bin/macosx/>
 
