@@ -3,9 +3,9 @@ Curso ciencia reproducible - Introducción a Git y GitHub. UCA 2023
 
 **Responsables**:
 
-Sergio Picó Jordá - INMAR (UCA)
+María Hurtado de Mendoza Romo - INMAR (UCA) & EBD
 
-María Hurtado de Mendoza Romo - INMAR (UCA)
+Sergio Picó Jordá - INMAR (UCA)
 
 Justificación
 ---
