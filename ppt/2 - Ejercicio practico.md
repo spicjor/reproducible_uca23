@@ -3,7 +3,7 @@ marp: true
 theme: gaia
 color: #000
 backgroundColor: #fff
-paginate: false
+paginate: true
 ---
 
 <!--_paginate: false -->
@@ -36,34 +36,34 @@ paginate: false
 
     1. Creamos un token personal en GitHub.
     
-        Profile -> Settings
+---
+
+Profile -> Settings
 
 ![bg right 85%](img/vincular_git_rstudio/paso1_git.png)
 
 ---
 
-- **Vincular RStudio y GitHub:**
+Developer Settings
 
-    Developer Settings
-
-![bg right 90%](img/vincular_git_rstudio/paso2.png)
+![bg right 95%](img/vincular_git_rstudio/paso2.png)
 
 ---
 
-![bg center 80%](img/vincular_git_rstudio/paso3_git.png)
+![bg center 50%](img/vincular_git_rstudio/paso3_git.png)
 
 ---
 
 2.  Presentarnos a Git:
 
-```{r, include = FALSE}
-       git config --global user.name 'Nombre Apellido' 
-       git config --global user.email '[nombreapellido\@example.com](mailto:nombreapellido@example.com){.email}' 
-       git config --global --list
+Definimos nuestro nombre de usuario:
+`git config --global user.name 'Nombre Apellido'`
 
-```
+Definimos nuestro email:
+`git config --global user.email 'email'` 
 
-Definimos nuestro nombre de usuario, nuestro email y comprobamos que todo es correcto.
+Comprobamos que todo es correcto:
+`git config --global --list`
 
 ---
 
@@ -91,6 +91,8 @@ Un repositorio es la colección de carpetas y archivos correspondiente a un proy
 File \> New Project \> Version Control \> Git
 
 Copiar la url de nuestro repositorio de GitHub. Se genera una carpeta en local, con el contenido del repositorio.
+
+Se nos pedirá que nos autentiquemos (token, vía navegador, etc.), para demostrar que somos propietarios del repositorio.
 
 **¡Ya tenemos nuestro proyecto sincronizado en Rstudio y Github!**
 
@@ -122,6 +124,13 @@ El flujo de trabajo habitual debe ser:
 
 ---
 
+## Ejercicio 1
+
+1. Vamos a hacer un sencillo análisis usando un conjunto de datos de éxitos de Spotify 2010-2019.
+
+2. Una vez creado el script, hacer `add` + `commit` + `push` para grabar los cambios en local y en GitHub.
+
+---
 ## La he liado, ¿cómo vuelvo atrás?
 
 Si he hecho un cambio que deseo eliminar, hay múltiples opciones:
@@ -130,18 +139,54 @@ Si he hecho un cambio que deseo eliminar, hay múltiples opciones:
 
 - `reset`: deshace un `commit` y/o un `git add` y/o los cambios del directorio de trabajo.
 
-- `revert HEAD`: es la opción segura de `git reset` para deshacer un commit ya que no resetea un proyecto a su estado anterior eliminando todos los commits posteriores (es decir, no elimina el historial de commits). Recomendamos usar `git reset` en ramas que no hayan sido compartidas todavía (es decir, que no hayan sido commitidas a un repositorio remoto que otros estén usando). Resetear es cambiar el historial sin dejar rastro. Esto es siempre una mala práctica y puede causar problemas. Si queremos deshacer los cambios en las ramas que se comparten con otros, recomendamos utilizar el comando `git revert`. Con `git revert` quedará constancia de que se ha deshecho un cambio.
+- `revert HEAD`: La opción segura de `git reset` para deshacer un commit. Deshace commit pero deja constancia de que se ha deshecho un cambio.
 
 ---
 
-## ejercicio
+## Ejercicio 2
 
-Cada integrante del equipo independientemente:
+1.  Vamos a actualizar el README de nuestro repositorio para contar lo que hemos hecho analizando datos de Spotify.
 
-1.  Realiza algunos cambios en el script que creaste en el ejercicio 2 o en el README.txt
+2.  Hacer un commit de los cambios y hacer `git reset --soft HEAD\~1`. ¿Qué ha pasado?
 
-2.  Realiza un commit de los cambios y prueba hacer `git reset --soft HEAD\~1`
+3.  Hacemos el commit otra vez y hacer ahora `git reset --mixed HEAD\~1`. ¿Qué ha pasado ahora?
 
-3.  Realiza otro commit y prueba hacer `git reset --mixed HEAD\~1`
+4.  Hacemos el commit de nuevo y hacer `git reset --hard HEAD\~1`. ¿Y ahora?
 
-4.  Realiza un último commit y prueba hacer `git reset --hard HEAD\~1`
+---
+
+## ¿Cómo colaborar?
+
+Podemos invitar a colaboradores a nuestro repositorio.
+
+En nuestro repositorio: Settings \> Access - Collaborators \> Add people
+
+Añadimos el nombre de usuario de nuestro compañero/a.
+
+Aceptamos invitación en Profile \> Your Organizations
+
+---
+
+## Ejercicio 2
+
+1. En nuestro repositorio, añadimos como colaborador a la persona a nuestro lado.
+
+2. Clonamos en RStudio el proyecto al que se nos ha invitado.
+
+3. Hacemos un cambio en el script de R, cambiamos la línea de tendencia a roja, por ejemplo.
+
+4. `add`+ `commit` + `push`
+
+5. Ver los cambios en nuestro repositorio en GitHub, `pull` para descargar los cambios en local.
+
+---
+
+## Manuscritos reproducibles
+
+Vamos a trasladar nuestro script sencillo en R a un archivo markdown (.Rmd), que genera un archivo de texto con código y resultados integrados, para completar la reproducibilidad del proyecto.
+
+---
+
+## El último paso, archivar
+
+Vamos a crear una cuenta en Zenodo (https://zenodo.org/) y subimos la carpeta de nuestro proyecto con un DOI (enlace permanente y citable).
