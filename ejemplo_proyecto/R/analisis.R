@@ -27,6 +27,7 @@
 
 
 # Instalar paquetes si es necesario
+# install.packages("pacman")
 # pacman::p_load(readr, tidyr, dplyr, terra, stringr, maptiles, basemaps, leaflet, janitor)
 
 # Cargar los paquetes necesarios
